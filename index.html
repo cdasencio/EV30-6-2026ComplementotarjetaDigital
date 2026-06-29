@@ -261,6 +261,17 @@
         .contenido .saludo { font-size: 1.45rem; margin-bottom: 15px; font-weight: 700; }
         .contenido .cuerpo { font-size: 1.02rem; line-height: 1.75; margin-bottom: 18px; }
         .contenido .firma { font-size: 2.5rem; text-align: right; color: var(--color-firma); margin: 0; }
+        .scroll-hint {
+            position: sticky; bottom: 0; display: block; width: 38px; height: 38px;
+            margin: 12px auto 0; border-radius: 50%; text-align: center; line-height: 36px;
+            font-size: 1.45rem; color: #a8174d; background: rgba(255, 244, 247, 0.86);
+            box-shadow: 0 8px 22px rgba(97, 18, 48, 0.18); animation: flecha-suave 1.25s ease-in-out infinite;
+            pointer-events: none; z-index: 2;
+        }
+        @keyframes flecha-suave {
+            0%, 100% { transform: translateY(0); opacity: 0.72; }
+            50% { transform: translateY(5px); opacity: 1; }
+        }
 
         .bloque-firma {
             display: flex; align-items: flex-end; justify-content: flex-end;
@@ -448,6 +459,7 @@
                     <div class="contenido">
                         <span class="fecha">30 de junio</span>
                         <p class="saludo">No s&eacute; por d&oacute;nde empezar...</p>
+                        <span class="scroll-hint" aria-hidden="true">&darr;</span>
                         <p class="cuerpo">No soy tan expresivo como usted piensa, excepto con una persona como usted, que me causa todo esto. Entonces quise escribirle.</p>
                         <p class="cuerpo">Yo s&eacute; que las cosas no son como antes y, aunque con el coraz&oacute;n lo deseara y todo a manos llenas lo diera, pues ya est&aacute;... esto es as&iacute;. Quiz&aacute; el amor no funciona as&iacute;, con reencuentros, ni acercamientos, ni segundas veces u oportunidades.</p>
                         <p class="cuerpo">He comprendido bien cu&aacute;l es su pensamiento, su forma de ver la vida, y en serio que se la respetar&eacute;. Y disculpe si caus&eacute; esa sensaci&oacute;n, tantas veces, de invadir su espacio y crear v&iacute;nculos donde solo yo los ve&iacute;a.</p>
